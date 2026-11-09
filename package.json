@@ -1,5 +1,5 @@
 {
-  "name": "dsh-opencode-go-quota",
+  "name": "dsh-opencodego-usage",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -28,11 +28,11 @@
   "icon": "./icon.svg",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PilotPhil/dsh-opencode-go-quota.git"
+    "url": "git+https://github.com/PilotPhil/dsh-opencodego-usage.git"
   },
-  "homepage": "https://github.com/PilotPhil/dsh-opencode-go-quota#readme",
+  "homepage": "https://github.com/PilotPhil/dsh-opencodego-usage#readme",
   "bugs": {
-    "url": "https://github.com/PilotPhil/dsh-opencode-go-quota/issues"
+    "url": "https://github.com/PilotPhil/dsh-opencodego-usage/issues"
   },
   "engines": {
     "dsh": ">=0.2.0-rc.1 <0.3.0-0"

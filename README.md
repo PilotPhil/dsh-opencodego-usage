@@ -1,4 +1,4 @@
-# dsh-opencode-go-quota
+# dsh-opencodego-usage
 
 在 DeepSeek Harness 左侧栏显示 **OpenCode Go 订阅余量**：5 小时、本周、本月三档，带进度条、重置时间和一键刷新；附带一个 `opencode_go_quota` 工具，可以直接问 agent「查一下额度」。
 
@@ -34,10 +34,10 @@
 ### 方式 A：从 GitHub 安装（推荐）
 
 ```bash
-dsh plugin --profile <profile> add "github:PilotPhil/dsh-opencode-go-quota#<commit-sha>"
+dsh plugin --profile <profile> add "github:PilotPhil/dsh-opencodego-usage#<commit-sha>"
 ```
 
-> `#` 后面的 commit SHA 建议写全（40 位），见 [commits 页](https://github.com/PilotPhil/dsh-opencode-go-quota/commits/main)，这样可以锁住安装内容，避免后续推送悄悄改掉已安装的版本。
+> `#` 后面的 commit SHA 建议写全（40 位），见 [commits 页](https://github.com/PilotPhil/dsh-opencodego-usage/commits/main)，这样可以锁住安装内容，避免后续推送悄悄改掉已安装的版本。
 > PowerShell 里 `#` 是注释符，**参数必须加引号**，否则 SHA 会被吃掉。
 
 ### 方式 B：从本地目录安装（开发时用）
@@ -55,7 +55,7 @@ dsh plugin --profile <profile> add "link:<插件目录绝对路径>"
 ```yaml
 - insert:
     - id: opencode-go-quota
-      name: dsh-opencode-go-quota
+      name: dsh-opencodego-usage
 ```
 
 装完**重启 DSH**。启动后左侧栏底部应出现上面的卡片；若没有，检查 DSH 日志里有没有 `opencode-go-quota` 的加载失败信息。
@@ -67,7 +67,7 @@ dsh plugin --profile <profile> add "link:<插件目录绝对路径>"
 只需要一把 OpenCode API key（`oc_sk_...`，在 <https://opencode.ai/console> 的 Account › Personal API keys 创建）。三种来源，按优先级：
 
 1. **卡片里粘贴** —— 未配置或查询失败时，卡片下方会出现输入框；输入后点「保存」。
-2. **设置页** —— 设置 → 插件 → `dsh-opencode-go-quota` → API key。保存前会先用这把 key 真跑一次接口，通过才写入。
+2. **设置页** —— 设置 → 插件 → `dsh-opencodego-usage` → API key。保存前会先用这把 key 真跑一次接口，通过才写入。
 3. **环境变量 / `.env`** —— 变量名 `OPENCODE_GO_API_KEY`。
 
 > 变量名与 DSH 里 OpenCode Go provider 的 `apiKeyEnv` 一致，所以**如果你已经在这个 profile 里配好了 OpenCode Go 推理用的 key，这个插件可以直接用，不用再配一遍**。
@@ -78,7 +78,7 @@ key 只存在于 Host 进程侧：卡片所在的浏览器端从不接触密钥�
 
 ## 设置项
 
-位置：**设置 → 插件 → dsh-opencode-go-quota**（该 bundle 自己的页面）。
+位置：**设置 → 插件 → dsh-opencodego-usage**（该 bundle 自己的页面）。
 
 | 设置 | 取值 | 说明 |
 | --- | --- | --- |
@@ -179,7 +179,7 @@ Authorization: Bearer oc_sk_...
 ## 开发
 
 ```
-dsh-opencode-go-quota/
+dsh-opencodego-usage/
 ├── index.js          # Host 半：凭据解析、用量查询、HTTP 路由、agent 工具
 ├── client.js         # Client 半：侧栏卡片、设置面板
 ├── cordis.patch.yml  # bundle 声明（插入 Loader 行）
@@ -191,7 +191,7 @@ dsh-opencode-go-quota/
 本地联调：
 
 ```bash
-dsh plugin --profile <profile> add "link:/absolute/path/to/dsh-opencode-go-quota"
+dsh plugin --profile <profile> add "link:/absolute/path/to/dsh-opencodego-usage"
 ```
 
 改完 `client.js` / `index.js` 重启 DSH 生效（浏览器端的热更取决于 DSH 版本是否开着开发监听）。
