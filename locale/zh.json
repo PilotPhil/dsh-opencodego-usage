@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenCode Go 套餐余量",
+    "description": "左侧栏中的卡片，逐行显示 OpenCode Go 的 5 小时、每周和每月套餐余量，数据来自你的 OpenCode API key。"
+  }
+}

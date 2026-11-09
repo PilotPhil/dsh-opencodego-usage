@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenCode Go quota",
+    "description": "A card in the left column showing the 5-hour, weekly and monthly OpenCode Go allowance left, read from your OpenCode API key."
+  }
+}

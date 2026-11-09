@@ -1,0 +1,10 @@
+# OpenCode Go quota — bundle patch.
+#
+# Reads the Go allowance (5-hour / weekly / monthly) with your OpenCode API key and shows it
+# under the composer, plus an `opencode_go_quota` tool the agent can call.
+#
+# The key is resolved from the credential store under OPENCODE_GO_API_KEY (the same name the
+# OpenCode Go provider uses), or from the process environment. Paste it once in the widget.
+- insert:
+    - id: opencode-go-quota
+      name: dsh-opencode-go-quota

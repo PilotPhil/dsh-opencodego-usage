@@ -1,0 +1,53 @@
+{
+  "name": "dsh-opencode-go-quota",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Shows the remaining OpenCode Go allowance (5-hour, weekly, monthly) under the DSH composer.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "opencode",
+    "quota",
+    "widget"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PilotPhil/dsh-opencode-go-quota.git"
+  },
+  "homepage": "https://github.com/PilotPhil/dsh-opencode-go-quota#readme",
+  "bugs": {
+    "url": "https://github.com/PilotPhil/dsh-opencode-go-quota/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "license": "MIT"
+}
