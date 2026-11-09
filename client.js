@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: 'dsh-opencodego-usage',
+  id: '@pilot12138/dsh-opencodego-usage',
   factory(require) {
     const React = require('react')
 
@@ -8,7 +8,7 @@ window.__ModuleLoader__.load({
     const ANCHOR_SLOT = 'sidebar.footer.action'
     const SETTINGS_SLOT = 'plugins.bundle.config'
     const INTERVAL_KEY = 'dsh.opencode-go-quota.interval'
-    const SETTINGS_EVENT = 'dsh-opencodego-usage:settings'
+    const SETTINGS_EVENT = '@pilot12138/dsh-opencodego-usage:settings'
     const INTERVAL_CHOICES = [0, 1, 5, 10, 15, 30, 60]
     const DEFAULT_INTERVAL = 5
 
@@ -690,7 +690,7 @@ window.__ModuleLoader__.load({
         })
         ctx.slots.inject(SETTINGS_SLOT, () => ctx.slots.register({
           name: SETTINGS_SLOT,
-          key: 'dsh-opencodego-usage',
+          key: '@pilot12138/dsh-opencodego-usage',
         }, SettingsPanel))
       },
     }

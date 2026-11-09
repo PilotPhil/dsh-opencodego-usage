@@ -7,4 +7,4 @@
 # OpenCode Go provider uses), or from the process environment. Paste it once in the widget.
 - insert:
     - id: opencode-go-quota
-      name: dsh-opencodego-usage
+      name: '@pilot12138/dsh-opencodego-usage'

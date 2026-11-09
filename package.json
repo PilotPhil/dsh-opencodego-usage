@@ -1,14 +1,16 @@
 {
-  "name": "dsh-opencodego-usage",
+  "name": "@pilot12138/dsh-opencodego-usage",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
-  "description": "Shows the remaining OpenCode Go allowance (5-hour, weekly, monthly) under the DSH composer.",
+  "description": "DeepSeek Harness plugin: shows the remaining OpenCode Go allowance (5-hour, weekly, monthly) as a card in the sidebar, plus an opencode_go_quota agent tool.",
   "keywords": [
     "dsh",
     "dsh-plugin",
+    "deepseek-harness",
     "opencode",
+    "opencode-go",
     "quota",
+    "usage",
     "widget"
   ],
   "exports": {
@@ -28,11 +30,11 @@
   "icon": "./icon.svg",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PilotPhil/dsh-opencodego-usage.git"
+    "url": "git+https://github.com/PilotPhil/@pilot12138/dsh-opencodego-usage.git"
   },
-  "homepage": "https://github.com/PilotPhil/dsh-opencodego-usage#readme",
+  "homepage": "https://github.com/PilotPhil/@pilot12138/dsh-opencodego-usage#readme",
   "bugs": {
-    "url": "https://github.com/PilotPhil/dsh-opencodego-usage/issues"
+    "url": "https://github.com/PilotPhil/@pilot12138/dsh-opencodego-usage/issues"
   },
   "engines": {
     "dsh": ">=0.2.0-rc.1 <0.3.0-0"
